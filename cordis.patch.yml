@@ -28,7 +28,8 @@
   config:
     includeHarnessIdentity: false
     personaPrefix: ""
-    personaSuffix: Your working directory is {{cwd}}.
+    # Workspace context is supplied by Harness; cwd is not a prompt variable in 0.2.1.
+    personaSuffix: ""
 
 - id: dsh-purge
   inject: [systemPrompt, tools]
